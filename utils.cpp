@@ -44,7 +44,7 @@ void printObatTable(const std::vector<Obat>& obatArray) {
 
 void countingSortObat(std::vector<Obat>& arr, const std::string& sortBy) {
     if (sortBy == "id") {
-        // Counting sort based on ID
+        
         int maxId = 0;
         for (const auto& obat : arr) {
             if (obat.id > maxId) {
@@ -70,7 +70,7 @@ void countingSortObat(std::vector<Obat>& arr, const std::string& sortBy) {
 
         arr = output;
     } else if (sortBy == "nama") {
-        // Counting sort based on Nama (using radix sort approach for strings)
+        
         int n = arr.size();
         std::vector<Obat> output(n);
         int maxLen = 0;
@@ -103,7 +103,7 @@ void countingSortObat(std::vector<Obat>& arr, const std::string& sortBy) {
         }
     } else if (sortBy == "harga") {
         int n = arr.size();
-        const int range = 11001; // 0 to 10000, with 10001 elements
+        const int range = 11001; 
         std::vector<std::vector<Obat>> buckets(range);
 
         for (const auto& obat : arr) {

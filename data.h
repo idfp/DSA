@@ -102,8 +102,6 @@ private:
     std::vector<Pharmacy> pharmacies;
     std::vector<std::vector<Edge>> adjacencyList;
     std::string directionToString(Direction direction);
-    std::pair<int, int> getDirectionOffset(Direction direction, double distance);
-    void printGrid(const std::vector<std::vector<char>>& grid);
 
 public:
     PharmacyGraph(int numPharmacies);

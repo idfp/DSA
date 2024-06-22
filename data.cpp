@@ -181,43 +181,6 @@ std::string PharmacyGraph::directionToString(Direction direction)
     }
 }
 
-std::pair<int, int> PharmacyGraph::getDirectionOffset(Direction direction, double distance)
-{
-    switch (direction)
-    {
-    case NORTH:
-        return {-1 * distance, 0 * distance};
-    case NORTHEAST:
-        return {-1 * distance, 1 * distance};
-    case EAST:
-        return {0 * distance, 1 * distance};
-    case SOUTHEAST:
-        return {1 * distance, 1 * distance};
-    case SOUTH:
-        return {1 * distance, 0 * distance};
-    case SOUTHWEST:
-        return {1 * distance, -1 * distance};
-    case WEST:
-        return {0 * distance, -1 * distance};
-    case NORTHWEST:
-        return {-1 * distance, -1 * distance};
-    default:
-        return {0, 0};
-    }
-}
-
-void PharmacyGraph::printGrid(const std::vector<std::vector<char>> &grid)
-{
-    for (const auto &row : grid)
-    {
-        for (const auto &cell : row)
-        {
-            std::cout << cell;
-        }
-        std::cout << "\n";
-    }
-}
-
 void PharmacyGraph::addPharmacy(int index, const std::string &name, const std::string &address)
 {
     pharmacies[index] = Pharmacy(name, address);

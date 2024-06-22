@@ -1,3 +1,8 @@
+/**
+ * Tugas UAS Praktikum Struktur Data dan Algoritma
+ * Kelompok 7 S1 Sistem Informasi UPN Veteran Jakarta
+ * Program resepsionis apotek PermadiCare.
+ */
 #include <iostream>
 #include "utils.h"
 #include "data.h"
